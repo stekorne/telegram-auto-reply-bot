@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from logger import logger
+from loguru import logger
 
 
 class AutoReplyStorage:

@@ -9,7 +9,7 @@ from aiogram.types import Message
 from dotenv import load_dotenv
 
 from auto_reply_storage import AutoReplyStorage
-from logger import logger
+from loguru import logger
 
 load_dotenv()
 
