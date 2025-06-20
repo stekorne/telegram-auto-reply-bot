@@ -2,4 +2,8 @@ import sys
 
 from loguru import logger
 
-logger.add(sys.stdout, format="{time} | {level} | {message}", level="DEBUG")
+from settings import DEBUG
+
+if not DEBUG:
+    logger.remove()
+    logger.add(sys.stdout, format="{level} | {message}", level="INFO")

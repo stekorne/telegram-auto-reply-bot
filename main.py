@@ -1,21 +1,14 @@
 import asyncio
-import os
 from datetime import datetime, time
 
 import pytz
 from aiogram import Bot, Dispatcher, F
 from aiogram.enums import ChatType
 from aiogram.types import Message
-from dotenv import load_dotenv
-from logger import logger
 
 from auto_reply_storage import AutoReplyStorage
-
-load_dotenv()
-
-TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
-if not TOKEN:
-    raise ValueError("TELEGRAM_BOT_TOKEN не найден в окружении")
+from logger import logger
+from settings import TOKEN
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
