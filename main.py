@@ -7,7 +7,7 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.enums import ChatType
 from aiogram.types import Message
 from dotenv import load_dotenv
-from loguru import logger
+from logger import logger
 
 from auto_reply_storage import AutoReplyStorage
 
