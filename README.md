@@ -42,7 +42,6 @@
 
    ```env
    TELEGRAM_BOT_TOKEN="ваш_токен_бота_от_BotFather"
-   RAILWAY_ENV="dev"
    ```
    
 ## Настройка бота в Telegram
