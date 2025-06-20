@@ -47,7 +47,8 @@
 4. Создайте файл .env рядом с основным скриптом и добавьте туда токен бота:
 
    ```env
-   TELEGRAM_BOT_TOKEN=ваш_токен_бота_от_BotFather
+   TELEGRAM_BOT_TOKEN="ваш_токен_бота_от_BotFather"
+   RAILWAY_ENV="dev"
    ```
    
 ## Настройка бота в Telegram
