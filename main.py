@@ -6,19 +6,18 @@ import pytz
 from aiogram import Bot, Dispatcher, F
 from aiogram.enums import ChatType
 from aiogram.types import Message
-from dotenv import load_dotenv
 
 from auto_reply_storage import AutoReplyStorage
 from loguru import logger
 
-load_dotenv()
+if os.getenv("RAILWAY_ENV") != "prod":
+    from dotenv import load_dotenv
 
-logger.info('Запуск бота...')
+    load_dotenv()
 
 TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 if not TOKEN:
-    logger.error('TELEGRAM_BOT_TOKEN не найден в .env')
-    raise ValueError('TELEGRAM_BOT_TOKEN не найден в .env')
+    raise ValueError("TELEGRAM_BOT_TOKEN не найден в окружении")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
